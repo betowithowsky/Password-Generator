@@ -81,6 +81,22 @@ function check() {
         let matchesCap = pswd.match(cap);
         let matchesNonCap = pswd.match(nonCap);
 
+        if(matchesCap){
+            document.getElementById("hasLatterCap").innerHTML = `<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: chartreuse; margin-right: 10px"></span>(À - Z) Letras maiusculos`
+            document.getElementById('hasLatterCap').setAttribute("style", 'color: black'); 
+        }else{
+            document.getElementById("hasLatterCap").innerHTML = `(À - Z) Letras maiusculos`
+            document.getElementById('hasLatterCap').setAttribute("style", 'color: #b4b4b4');  
+        }
+
+        if(matchesNonCap){
+            document.getElementById("hasLatter").innerHTML = `<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: chartreuse; margin-right: 10px"></span>(à - z) Letras minúsculas`
+            document.getElementById('hasLatter').setAttribute("style", 'color: black'); 
+        }else{
+            document.getElementById("hasLatter").innerHTML = `(à - z) Letras minúsculas`
+            document.getElementById('hasLatter').setAttribute("style", 'color: #b4b4b4');  
+        }
+
         if (matchesCap && matchesNonCap) {
             if (matchesCap.length > 2)
                 return 3;
@@ -98,6 +114,14 @@ function check() {
         let numbers = /[\d]/;
         let matchesNumbers = pswd.match(numbers);
 
+        if(matchesNumbers){
+            document.getElementById("hasNumbers").innerHTML = `<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: chartreuse; margin-right: 10px"></span>Numerais (0 a 9)`
+            document.getElementById('hasNumbers').setAttribute("style", 'color: black'); 
+        }else{
+            document.getElementById("hasNumbers").innerHTML = `Numerais (0 a 9)`
+            document.getElementById('hasNumbers').setAttribute("style", 'color: #b4b4b4');  
+        }
+
         if (matchesNumbers) {
             if (matchesNumbers.length > 2)
                 return 3;
@@ -112,6 +136,14 @@ function check() {
 
         let symbols = /[\W]/g;
         let matchesSymbols = pswd.match(symbols);
+
+        if(matchesSymbols){
+            document.getElementById("hasSymbols").innerHTML = `<span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: chartreuse; margin-right: 10px"></span>Caracteres não-alfabéticos ( !, $, #, %, (, ) )`
+            document.getElementById('hasSymbols').setAttribute("style", 'color: black'); 
+        }else{
+            document.getElementById("hasSymbols").innerHTML = `Caracteres não-alfabéticos ( !, $, #, %, (, ) )`
+            document.getElementById('hasSymbols').setAttribute("style", 'color: #b4b4b4');  
+        }
 
         if (matchesSymbols) {
             if (matchesSymbols.length > 2)
