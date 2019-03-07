@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="padding-top: 10%">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="text-align: center">
+                        <span class="
+                    glyphicon glyphicon-lock" aria-hidden="true" style="padding-right: 10px;"></span>Password Generator</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <form>
+                    <div class="col-md-12 form-group" style="align-items: center; text-align: center">
+                        <input class="form-control" style="width: 50%; display: initial" type="text" id="passLenght" placeholder="insira a quantidade de caracter para o password"
+                        />
+                        <button style="width: 50%; margin-top: 10px; font-size: 25px;" type="button" class="btn btn-primary" onclick="generatePassword()">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true" style="padding-right: 10px;"></span>Gerar</button>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="senhaGerada" style="text-align: center; display: none">
+                    <div class="bg-success" style="width: 50%;align-items: center;border-radius: 15px;display: inline-block;">
+                        <h1>Senha: </h1>
+
+                        <h1 id="results"></h1>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/generation.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
